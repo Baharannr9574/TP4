@@ -21,9 +21,11 @@ class Project(models.Model):
         expense_list_temp = [10, 11, 12]
         for expenses in expense_list_temp:
             total_temp += expenses
-            
+        
+        expense_amount = total_temp
+
         for expense in expense_list:
-            total_expense_amount += expense.amount
+            total_expense_amount += expense_amount
 
         # temporary solution, because the form currently only allows integer amounts
         total_expense_amount = int(total_expense_amount)
